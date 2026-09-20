@@ -4,7 +4,7 @@
   "description": "Aggregates hotel offers from two mock suppliers, dedupes by name, selects the best price per hotel, orchestrated with Temporal and cached/filtered in Redis.",
   "main": "dist/api/server.js",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "node api.js && tsc -p tsconfig.json",
     "start:api": "node dist/api/server.js",
     "start:worker": "node dist/temporal/worker.js",
     "dev:api": "ts-node src/api/server.ts",
